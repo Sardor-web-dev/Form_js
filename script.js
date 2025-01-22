@@ -109,7 +109,6 @@
             user[key] = value;
         });
 
-        
         const foundUser = users.find(item => item.username === user.username);
 
         if (!foundUser) {
