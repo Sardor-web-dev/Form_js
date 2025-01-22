@@ -84,7 +84,7 @@
         const fm = new FormData(signUpForm)
         const user = {};
 
-        fm.forEach((velue, key) => {
+        fm.forEach((value, key) => {
             user[key] = value;
         });
 
