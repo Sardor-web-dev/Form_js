@@ -81,23 +81,23 @@
     signUpForm.onsubmit = (e) => {
         e.preventDefault();
 
-        const fm = new FormData(signUpForm);
+        const fm = new FormData(signUpForm)
         const user = {};
 
-        fm.forEach((value, key) => {
+        fm.forEach((velue, key) => {
             user[key] = value;
         });
 
+        const isExist = user.find(item => item.username === user.username);
 
-        const isExist = users.find(item => item.username === user.username);
-
-        if (isExist) {
-            return alert('User already exists');
-        } else {
+        if(isExist) {
+            return alert ('User already Exist!')
+        }
+        else {
             users.push(user);
             alert('User signed up successfully');
         }
-    };
+    }
 
     signInForm.onsubmit = (e) => {
         e.preventDefault();
