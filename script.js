@@ -78,7 +78,7 @@
     const signInForm = document.forms.sign_in;
     const users = [];
          
-    signUpForm.onsubmit = (e) => {  
+    signUpForm.onsubmit = (e) => {
         e.preventDefault();
 
         const fm = new FormData(signUpForm)
