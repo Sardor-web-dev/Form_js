@@ -77,8 +77,8 @@
     const signUpForm = document.forms.sign_up;
     const signInForm = document.forms.sign_in;
     const users = [];
-
-    signUpForm.onsubmit = (e) => {
+         
+    signUpForm.onsubmit = (e) => {  
         e.preventDefault();
 
         const fm = new FormData(signUpForm)
@@ -88,7 +88,7 @@
             user[key] = value;
         });
 
-        const isExist = user.find(item => item.username === user.username);
+        const isExist = users.find(item => item.username === user.username);
 
         if(isExist) {
             return alert ('User already Exist!')
